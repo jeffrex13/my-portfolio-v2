@@ -1,10 +1,8 @@
-import { PageHeader } from "@/components/page-header"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { PageHeader } from "@/components/page-header";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const technologies = [
-  { name: "HTML5", icon: "🌐", description: "Semantic markup & structure" },
-  { name: "CSS3", icon: "🎨", description: "Modern styling & animations" },
   { name: "JavaScript", icon: "⚡", description: "Dynamic functionality" },
   { name: "TypeScript", icon: "📘", description: "Type-safe development" },
   { name: "React", icon: "⚛️", description: "Component-based UIs" },
@@ -13,26 +11,39 @@ const technologies = [
   { name: "Node.js", icon: "🟢", description: "Server-side JavaScript" },
   { name: "Git", icon: "🔀", description: "Version control" },
   { name: "Figma", icon: "🎯", description: "UI/UX design" },
-  { name: "Responsive Design", icon: "📱", description: "Mobile-first approach" },
+  {
+    name: "Responsive Design",
+    icon: "📱",
+    description: "Mobile-first approach",
+  },
   { name: "Web Performance", icon: "🚀", description: "Speed optimization" },
-]
+  { name: "Electron.js", icon: "⚛️", description: "Desktop applications" },
+  { name: "Go", icon: "🐹", description: "Backend development" },
+];
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen text-white">
-      <PageHeader title="About Me" description="Learn more about my journey as a front-end developer" />
-      <main className="container mx-auto px-4 py-12">
+      <PageHeader
+        title="About Me"
+        description="Learn more about my journey as a front-end developer"
+      />
+      <main className="container mx-auto px-4 pt-4 pb-12">
         <div className="max-w-5xl mx-auto">
           <div className="space-y-6 text-gray-300 mb-16">
             <p className="text-lg leading-relaxed">
-              I am a passionate front-end developer with expertise in creating responsive, user-friendly websites and
-              web applications. My journey in web development started with a curiosity about how websites work and has
-              evolved into a career focused on crafting exceptional user experiences.
+              I am a passionate front-end developer with expertise in creating
+              responsive, user-friendly websites and web applications. My
+              journey in web development started with a curiosity about how
+              websites work and has evolved into a career focused on crafting
+              exceptional user experiences.
             </p>
 
             <p className="text-lg leading-relaxed">
-              With a strong foundation in modern web technologies, I specialize in React and Next.js ecosystems. I
-              believe in writing clean, maintainable code and staying current with industry best practices.
+              With a strong foundation in modern web technologies, I specialize
+              in React and Next.js ecosystems. I believe in writing clean,
+              maintainable code and staying current with industry best
+              practices.
             </p>
           </div>
 
@@ -55,10 +66,10 @@ export default function AboutPage() {
                     <div className="text-4xl group-hover:scale-110 transform transition-transform duration-300">
                       {tech.icon}
                     </div>
-                    <h4 className="font-semibold text-white group-hover:text-white transition-colors duration-300">
+                    <h4 className="font-semibold text-white transition-colors duration-300">
                       {tech.name}
                     </h4>
-                    <p className="text-sm text-gray-400 group-hover:text-gray-200 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                    <p className="text-sm text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
                       {tech.description}
                     </p>
                   </div>
@@ -71,13 +82,18 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center pt-8">
-            <p className="text-gray-400 mb-6">Interested in working together? Let's create something amazing.</p>
-            <Button asChild className="bg-[#3498db] hover:bg-[#2980b9] text-white px-8 py-3 text-lg">
+            <p className="text-gray-400 mb-6">
+              Interested in working together? Let's create something amazing.
+            </p>
+            <Button
+              asChild
+              className="bg-[#3498db] hover:bg-[#2980b9] text-white px-8 py-3"
+            >
               <Link href="/contact">Start a Conversation</Link>
             </Button>
           </div>
         </div>
       </main>
     </div>
-  )
+  );
 }
